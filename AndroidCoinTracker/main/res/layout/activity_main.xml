@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_animation_duration="1200">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+                <include layout="@layout/coin_layout_place_holder"/>
+
+            </LinearLayout>
+
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_coins"
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
